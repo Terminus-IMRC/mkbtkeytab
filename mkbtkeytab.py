@@ -5,7 +5,7 @@ table=[[-1 for y in range(2)]for x in range(0xff)]
 
 def outputTable():
 	for f in range(0xff-1):
-		print('\t{%d,\t%d}\t/* 0x%02X */,'%(table[f][0], table[f][1], f))
+		print('\t{%d,\t%d},\t/* 0x%02X */'%(table[f][0], table[f][1], f))
 	print('\t{%d,\t%d}\t/* 0x%02X */'%(table[0xff-1][0], table[0xff-1][1], 0xff-1))
 
 def processNormalKeyLine(l):
@@ -41,11 +41,11 @@ def main():
 
 			processNormalKeyLine(l)
 
-	print('int table_normal_keys[%d][2]={'%(0xff))
+	print('int8_t table_normal_keys[%d][2]={'%(0xff))
 	print('\t/* rows and columns */')
 	print('\t/* Note that -1 means not-implemented */')
 	outputTable()
-	print('}')
+	print('};')
 
 if __name__=='__main__':
 	main()
