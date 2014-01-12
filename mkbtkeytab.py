@@ -28,10 +28,10 @@ def main():
 			print('Skipping.', file=sys.stderr)
 		else:
 			try:
-				if l[0][0]=='\\':
+				if l[0][0]=='\\' and l[0][1]!='\\':
 					l[0]=int('0x'+l[0][1:], 0)
 				else:
-					l[0]=ord(l[0])
+					l[0]=ord(l[0][0]) #for \\
 				l[1]=int(l[1])
 				l[2]=int(l[2])
 			except ValueError:
