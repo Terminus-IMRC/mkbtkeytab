@@ -27,9 +27,9 @@ def main():
 			print("Error. len of the line \"%s\" is not 3. Skipping"%(s), file=sys.stderr)
 		else:
 			try:
-				l[0]=int(l[0], base=16)
-				l[1]=int(l[1], base=16)
-				l[2]=int(l[2], base=16)
+				l[0]=int(l[0], base=10)
+				l[1]=int(l[1], base=10)
+				l[2]=int(l[2], base=10)
 			except ValueError:
 				print("On line \"%s\""%(s), file=sys.stderr)
 				print("There are some invalid value.", file=sys.stderr)
