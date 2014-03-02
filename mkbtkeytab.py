@@ -9,8 +9,8 @@ def outputTable():
 	print('\t{%d,\t%d}\t/* %02d */'%(table[0xE7][0], table[0xE7][1], 0xE7))
 
 def processNormalKeyLine(l):
-	table[l[0]][0]=l[2]
-	table[l[0]][1]=l[1]
+	table[l[0]][0]=l[1]
+	table[l[0]][1]=l[2]
 
 def main():
 	while True:
