@@ -37,7 +37,7 @@ def main():
 
 			processNormalKeyLine(l)
 
-	print('int8_t table_normal_keys[%d][2]={'%(0xE7+1))
+	print('int8_t table_normal_keys[%d][2]={'%(0xE7+2))
 	print('\t/* rows and columns */')
 	print('\t/* Note that -1 means not-implemented */')
 	outputTable()
